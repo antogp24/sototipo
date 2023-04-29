@@ -45,8 +45,9 @@ def CheckPlayerHasFinished(player, camera, current_level, levels):
         if player.obj.rect.colliderect(current_level.end):
             next_level_id = f'{current_level.id+1}'
             current_level = levels[next_level_id]
+            camera.true_scroll[0] = current_level.start_pos[0]
+            camera.true_scroll[1] = current_level.start_pos[1]
             player.set_pos(current_level.start_pos[0], current_level.start_pos[1])
-            camera.reset()
     return current_level
 
 

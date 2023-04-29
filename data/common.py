@@ -76,9 +76,6 @@ class Camera:
         self.target = target
         self.screen_shake = 0
         self.scroll_lag = scroll_lag
-    def reset(self):
-        self.true_scroll[0] = 0
-        self.true_scroll[1] = 0
 
 camera = Camera(
     view_collider=pygame.Rect(0, 0, window_size[0], window_size[1]),
